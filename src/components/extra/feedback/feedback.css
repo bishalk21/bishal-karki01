@@ -1,0 +1,121 @@
+:root {
+    --container-width: 350px;
+}
+
+.container {
+    padding: var(--space-6);
+    width: var(--container-width);
+    border: var(--border);
+    box-shadow: var(--shadow-large);
+    border-radius: var(--radius);
+    background-color: var(--color-white);
+}
+
+.title {
+    font-size: var(--text-md);
+    margin-bottom: var(--space-4);
+    color: var(--color-gray-700);
+    text-align: center;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-4);
+}
+
+.button {
+    font-size: var(--text-xl);
+    height: var(--space-12);
+    border: var(--border);
+    border-radius: var(--radius);
+    background-color: var(--color-white);
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    box-shadow: var(--shadow);
+    transition: box-shadow var(--transition-speed) var(--transition-curve);
+    filter: grayscale(1) brightness(105%);
+}
+
+.button.selected {
+    z-index: 2;
+    background-color: var(--color-blue-200);
+    filter: none;
+    box-shadow: none;
+    border-color: var(--color-blue-500);
+}
+
+.emoji {
+    display: block;
+    transition: var(--transition-bounce);
+    /* Allows quicker subsequent clicks on adjecent buttons */
+    pointer-events: none;
+}
+
+.emoji.emphasize {
+    transform: scale(3);
+}
+
+.button:hover {
+    border-color: var(--color-gray-300);
+    filter: grayscale(0);
+}
+
+.button:focus {
+    box-shadow: var(--shadow-focus);
+    filter: grayscale(0);
+}
+
+.button:active {
+    border-color: var(--color-blue-500);
+    box-shadow: inset var(--shadow), var(--shadow-focus);
+}
+
+.feedback {
+    height: 0;
+    transition: var(--transition-bounce);
+}
+
+.content {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.content.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    transition: var(--transition);
+}
+
+.field {
+    /* As the default is inline-block, there's unwanted margin below the field */
+    display: block;
+    width: 100%;
+    font-size: var(--text-md);
+    padding: var(--space-2);
+    margin-top: var(--space-4);
+    border-radius: var(--radius);
+    border: var(--border);
+    /* For iOS Safari */
+    -webkit-appearance: none;
+}
+
+.submit {
+    font-size: var(--text-md);
+    padding: var(--space-3) var(--space-5);
+    margin-top: var(--space-4);
+    border: none;
+    font-weight: bold;
+    border-radius: var(--radius);
+    background-color: var(--color-blue-500);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: var(--color-blue-400);
+}
