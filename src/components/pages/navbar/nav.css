@@ -1,0 +1,70 @@
+nav {
+    background: rgba(0, 0, 0, 0.314);
+    width: max-content;
+    display: block;
+    padding: 1.0rem 2.0rem;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(16px);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: rgba(19, 217, 171, 0.571);
+}
+
+nav a.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.list-item {
+    list-style-type: none;
+    flex-basis: 100%;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #555;
+    transform: translateY(0);
+    transition: transform 0.5s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    color: var(--color-light);
+    opacity: 0.8;
+}
+
+.list-item-name {
+    font-style: "inknutAntiqua";
+    font-size: 13px;
+    font-weight: 650;
+    position: absolute;
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+.list-item:hover .list-item-name {
+    transform: translate(0, 32px);
+    opacity: 1;
+}

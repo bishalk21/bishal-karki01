@@ -1,0 +1,130 @@
+.contact-form {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 80vh;
+    margin-top: 4rem;
+    /* scroll */
+    padding-top: 3rem;
+}
+
+.c-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+}
+
+.c-right>form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.contact__options {
+    max-width: 100%;
+}
+
+.c-right .user {
+    width: 20rem;
+    height: 2rem;
+    padding: 0.3em;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 4rem !important;
+}
+
+.c-blur1 {
+    top: 1rem;
+    left: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form {
+        padding: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 40rem;
+    }
+
+    .c-right .user {
+        width: 16rem;
+    }
+
+}
+
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+
+}
+
+
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option {
+    background: var(--orange);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.contact__option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    /* background: transparent; */
+    border: 2px solid var(--color-primary);
+    resize: none;
+    /* color: var(--color-white); */
+}
+
+
+/*****MEDIA QUERIES (MEDIUM DEVICES)*****/
+
+@media screen and (max-width:1024px) {
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+
+
+
+/*****MEDIA QUERIES (MEDIUM DEVICES)*****/
+
+@media screen and (max-width:600px) {
+    .container.contact__container {
+        width: var(--container-width-sm);
+    }
+
+}
