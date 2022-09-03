@@ -20,7 +20,10 @@ export const SkillsPage = () => {
           <h3> Frontend Development </h3>{" "}
           <div className="experience__content">
             <article>
-              <BsPatchCheckFill className="experience__detail-icon" />
+              {/* <BsPatchCheckFill className="experience__detail-icon" /> */}
+              <span>
+                <i class="fa-brands fa-html5"></i>
+              </span>
               <div>
                 <h4> HTML </h4> <small> Experienced </small>{" "}
               </div>{" "}
