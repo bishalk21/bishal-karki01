@@ -44,16 +44,15 @@ export const ProjectPage = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <section id="portfolio">
-      <h5
-        style={{
-          color: darkMode ? "white" : "",
-        }}
-      >
-        {" "}
-        Recent Projects{" "}
-      </h5>{" "}
-      <h2> Projects </h2>{" "}
+    <section
+      id="portfolio"
+      style={{
+        background: darkMode ? "black" : "",
+        color: darkMode ? "white" : "",
+      }}
+    >
+      <h2> My Recent Projects </h2>
+      <h5>The following are some of the projects I have worked on. </h5>
       <div className="container portfolio__container">
         {" "}
         {data.map(({ id, image, title, github, demo }) => {
@@ -68,7 +67,7 @@ export const ProjectPage = () => {
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn"
+                  className="btn btn-dark"
                 >
                   {" "}
                   GitHub{" "}
@@ -76,7 +75,7 @@ export const ProjectPage = () => {
                 <a
                   href={demo}
                   target="_blank"
-                  className="btn btn-primary"
+                  className="btn btn-success"
                   rel="noopener noreferrer"
                 >
                   {" "}

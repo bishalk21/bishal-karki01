@@ -1,0 +1,133 @@
+$orbitPathScale: 2.8;
+$orbitAngle: 70deg;
+$skillSvgScale: 3;
+
+.sec-skills {
+  $self: &;
+  height: 100vh;
+
+  /* Container for the orbiting skills animation */
+  &__showcase {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateX($orbitAngle); // Gives the illusion of the orbit angle
+    transform-style: preserve-3d; // preserves all the content within this (skills) as 3D
+
+    /* Hidden orbit path of skills around the HTML image */
+    #{$self}__skill-orbit-path {
+      position: relative;
+      width: calc(300px * #{$orbitPathScale});
+      height: calc(300px * #{$orbitPathScale});
+      border-radius: 100%;
+      transform-style: preserve-3d;
+      animation: spin-right 30s linear infinite;
+
+      /* Skills image counter rotation to keep upright */
+      #{$self}--skill-rotate {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateX(-95deg);
+        transform-style: preserve-3d;
+        animation: spin-left 30s linear infinite;
+      }
+
+      #{$self}--skill-rotate > svg {
+        transform: scale($skillSvgScale);
+      }
+
+      #{$self}__skill-csharp {
+        bottom: 0;
+        left: 50%;
+      }
+
+      #{$self}__skill-bootstrap {
+        bottom: 5%;
+        left: 22%;
+      }
+
+      #{$self}__skill-javascript {
+        bottom: 25%;
+        left: 5%;
+      }
+
+      #{$self}__skill-jquery {
+        bottom: 50%;
+        left: 0%;
+      }
+
+      #{$self}__skill-reactjs {
+        top: 25%;
+        left: 5%;
+      }
+
+      #{$self}__skill-atlassian {
+        top: 5%;
+        left: 25%;
+      }
+
+      #{$self}__skill-sass {
+        top: 0;
+        left: 50%;
+      }
+
+      #{$self}__skill-mongodb {
+        top: 5%;
+        right: 25%;
+      }
+
+      #{$self}__skill-git {
+        top: 25%;
+        right: 5%;
+      }
+
+      #{$self}__skill-css3 {
+        top: 50%;
+        right: 0%;
+      }
+
+      #{$self}__skill-nodejs {
+        bottom: 25%;
+        right: 5%;
+      }
+
+      #{$self}__skill-dotnetcore {
+        bottom: 5%;
+        right: 22%;
+      }
+    }
+
+    /* Center the HTML image at the center of orbit */
+    #{$self}__skill-html5 {
+      position: absolute;
+      transform: rotateX(-$orbitAngle);
+    }
+  }
+
+  /* ---------- Animation ---------- */
+  @keyframes spin-right {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  @keyframes spin-left {
+    0% {
+      transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
+}

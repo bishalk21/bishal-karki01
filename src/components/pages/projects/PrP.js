@@ -7,13 +7,15 @@ export const PrP = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <MainLayout>
-      <ProjectPage
-        style={{
-          background: darkMode ? "black" : "",
-          color: darkMode ? "white" : "",
-        }}
-      />
-    </MainLayout>
+    <div
+      style={{
+        background: darkMode ? "black" : "",
+        color: darkMode ? "white" : "",
+      }}
+    >
+      <MainLayout>
+        <ProjectPage />
+      </MainLayout>{" "}
+    </div>
   );
 };

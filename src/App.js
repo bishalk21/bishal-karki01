@@ -10,7 +10,6 @@ import { AmP } from "./components/pages/about/AmP";
 import { SkP } from "./components/pages/skills/SkP";
 import { PrP } from "./components/pages/projects/PrP";
 import { BlP } from "./components/pages/blog/BlP";
-import { Container } from "react-bootstrap";
 
 function App() {
   const theme = useContext(themeContext);
