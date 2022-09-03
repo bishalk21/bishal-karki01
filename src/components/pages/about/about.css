@@ -3,13 +3,14 @@
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+    margin-bottom: 5rem;
 }
 
 .about_content {
     align-items: center;
     text-align: center;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -114,7 +115,7 @@
 
 .about__content p {
     margin: 2rem 0 2.6rem;
-    color: var(--color-light);
+    color: var(--color-black);
 }
 
 
@@ -133,7 +134,7 @@
         position: relative;
         display: flex;
         flex: auto;
-        margin-top: 55vh;
+
     }
 
     .about_content .title::before {
@@ -176,11 +177,11 @@
 
     .about__container {
         grid-template-columns: 1fr;
-        margin-top: 100px;
+
     }
 
     .about__me {
-        margin: 0 auto 3rem;
+
         width: 25%;
     }
 
@@ -211,7 +212,7 @@
     }
 
     .about__me {
-        margin: 0 auto 3rem;
+
         width: 65%;
     }
 

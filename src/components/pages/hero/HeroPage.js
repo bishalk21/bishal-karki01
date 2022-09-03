@@ -34,7 +34,7 @@ export const HeroPage = () => {
               color: darkMode ? "white" : "",
             }}
           >
-            <h3> Howdy&#33; I Am </h3>{" "}
+            <h3> Howdy &#33; I Am </h3>{" "}
           </span>{" "}
           <span> Bishal Karki </span>{" "}
           <span
@@ -60,20 +60,18 @@ export const HeroPage = () => {
         </div>{" "}
         {/* social icons */}{" "}
         {/* <div className="i-icons">
-              <img src={Github} alt="" />
-              <img src={LinkedIn} alt="" />
-              <img src={Instagram} alt="" />
-            </div>{" "} */}
-        <CTA />
-        {/* <FeedbackMe /> */}
+                        <img src={Github} alt="" />
+                        <img src={LinkedIn} alt="" />
+                        <img src={Instagram} alt="" />
+                      </div>{" "} */}{" "}
+        <CTA /> {/* <FeedbackMe /> */}{" "}
       </Col>{" "}
       {/* right image side */}{" "}
       <Col className="i-right">
-        {/* <img src={Vector1} alt="" /> */}
-        <img src="" alt="" />
-        <img src="" alt="" />
-        {/* <video src={boy} alt="" /> */} <img src={img1} alt="" />{" "}
-        {/* animation */}{" "}
+        {" "}
+        {/* <img src={Vector1} alt="" /> */} <img src="" alt="" />
+        <img src="" alt="" /> {/* <video src={boy} alt="" /> */}{" "}
+        <img src={img1} alt="" /> {/* animation */}{" "}
         <motion.img
           initial={{
             left: "-36%",
@@ -87,7 +85,7 @@ export const HeroPage = () => {
         />
         <motion.div
           initial={{
-            top: "25rem",
+            top: "5rem",
             left: "9rem",
           }}
           whileInView={{
@@ -97,17 +95,23 @@ export const HeroPage = () => {
           className="floating-div"
         >
           <FloatinDiv img={crown} text1="Web" text2="Developer" />
-        </motion.div>
-        {/* animation */}
+        </motion.div>{" "}
+        {/* animation */}{" "}
         <motion.div
-          initial={{ left: "15rem", top: "-11rem" }}
-          whileInView={{ left: "5rem" }}
+          initial={{
+            left: "15rem",
+            top: "-11rem",
+          }}
+          whileInView={{
+            left: "5rem",
+          }}
           transition={transition}
           className="floating-div"
         >
-          {/* floatinDiv mein change hy dark mode ka */}
+          {" "}
+          {/* floatinDiv mein change hy dark mode ka */}{" "}
           <FloatinDiv type="button" img={thumbup} text1="Hire" text2="Me" />
-        </motion.div>
+        </motion.div>{" "}
         <div
           className="blur"
           style={{

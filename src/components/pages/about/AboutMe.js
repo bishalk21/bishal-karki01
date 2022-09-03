@@ -5,6 +5,7 @@ import { CgUserlane } from "react-icons/cg";
 import me from "../../../assets/img/pp.jpeg";
 import "./about.css";
 import { themeContext } from "../../extra/Toggle/Context";
+import { Link } from "react-router-dom";
 
 export const AboutMe = () => {
   const theme = useContext(themeContext);
@@ -49,10 +50,10 @@ export const AboutMe = () => {
             approach all new projects with the priority of simplicity and
             functionality{" "}
           </p>{" "}
-          <a href="#contact" className="btn btn-primary">
+          <Link to="/contact" className="btn btn-primary">
             {" "}
             Let 's Connect{" "}
-          </a>{" "}
+          </Link>{" "}
         </div>{" "}
       </div>{" "}
     </section>
