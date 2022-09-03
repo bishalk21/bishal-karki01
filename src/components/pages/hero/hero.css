@@ -109,7 +109,7 @@
 /* blur */
 .blur {
     position: absolute;
-    width: 22rem;
+    /* width: 22rem; */
     height: 14rem;
     border-radius: 50%;
     background: #edd0ff;

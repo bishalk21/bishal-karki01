@@ -45,37 +45,39 @@ export const ContactPage = () => {
       }}
     >
       {" "}
-      {/* <h5> Get In Touch </h5> <h2> Contact Me </h2> */}{" "}
-      {/* <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
-                <span>Contact me</span> */}{" "}
-      {/* left side copy and paste from work section */}{" "}
       <div className="w-left container contact__container">
         <div className="awesome contact__options">
           {" "}
           {/* darkMode */}{" "}
           <article className="contact__option">
-            <MdContactMail />
-            <h4> Email </h4> <h5> karkibishal00@gmail.com </h5>{" "}
-            <Link
-              to="mailto:karkibishal00@gmail.com"
+            <h4>
+              {" "}
+              <MdContactMail /> Email{" "}
+            </h4>{" "}
+            <h5> karkibishal00@gmail.com </h5>{" "}
+            <a
+              href="mailto:karkibishal00@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               {" "}
               Leave a message <GrSend />{" "}
-            </Link>{" "}
+            </a>{" "}
           </article>{" "}
           <article className="contact__option">
-            <ImWhatsapp />
-            <h4> Whatsapp </h4> <h5> +61433982572</h5>{" "}
-            <Link
-              to="https://wa.me/61433982572"
+            <h4>
+              {" "}
+              <ImWhatsapp /> Whatsapp{" "}
+            </h4>{" "}
+            <h5> +61433982572</h5>{" "}
+            <a
+              href="https://wa.me/61433982572"
               target="_blank"
               rel="noopener noreferrer"
             >
               {" "}
               Leave a message <GrSend />{" "}
-            </Link>{" "}
+            </a>{" "}
           </article>{" "}
           <div
             className="blur s-blur1"
@@ -87,20 +89,26 @@ export const ContactPage = () => {
       </div>{" "}
       {/* right side form */}{" "}
       <div className="c-right">
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} action="">
           <input
             type="text"
             name="user_name"
             className="user"
-            placeholder="Name"
+            placeholder="Your Name"
           />
           <input
             type="email"
             name="user_email"
             className="user"
-            placeholder="Email"
+            placeholder="Your Email"
           />
-          <textarea name="message" className="user" placeholder="Message" />
+          <textarea
+            name="message"
+            className="user"
+            placeholder="Message"
+            type="text"
+            spellCheck="true"
+          />
           <input type="submit" value="Send" className="button" />
           <span> {done && "Thanks for Contacting me"} </span>{" "}
           <div
