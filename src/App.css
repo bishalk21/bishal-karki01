@@ -38,10 +38,10 @@
     --color-white: rgb(255, 255, 255);
     --color-light: rgb(255, 255, 255, 0.6);
     --transition: all 400ms ease;
-    --container-width-lg: 75%;
-    --container-width-md: 85%;
+    --container-width-lg: 1024px;
+    --container-width-md: 768px;
     --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
-    --container-width-sm: 90%;
+    --container-width-sm: 576px;
 }
 
 /*override variabke for dark theam*/
@@ -91,7 +91,8 @@ body {
     background: rgb(255, 255, 255);
     /* background-image: url(https://img.freepik.com/premium-photo/black-rectangular-mockups-dark-concrete-background-design-elements-portfolio_76255-1494.jpg); */
     background-repeat: no-repeat;
-    background-size: 100% 1000vh;
+    /* background-size: 100% 1000vh; */
+    background-size: 100%;
 }
 
 a {
