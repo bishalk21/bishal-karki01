@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterPage } from "../footer/FooterPage";
 import { NavbarPage } from "../navbar/NavbarPage";
+// import "../../../App.css";
 
 export const MainLayout = ({ children }) => {
   return (
@@ -10,7 +11,7 @@ export const MainLayout = ({ children }) => {
         style={{
           minHeight: "",
         }}
-        className="container main"
+        className="main"
       >
         {" "}
         {children}{" "}

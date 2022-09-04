@@ -40,7 +40,7 @@ export const NavbarPage = () => {
                 onClick={() => setActiveNav("/")}
                 className={activeNav === "/" ? "active" : ""}
               >
-                <img src={me} alt="BK" width="80px" />
+                <img src={me} alt="BK" width="70px" />
               </Link>{" "}
             </div>{" "}
             <Toggle />
@@ -48,11 +48,16 @@ export const NavbarPage = () => {
         </Navbar.Brand>
         <Navbar.Toggle
           className="navbar-togler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
           aria-controls="basic-navbar-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav js-nav n-right n-list">
+          <Nav className="nav js-nav n-right n-list">
             <ul
+              className="navbar-nav ms-auto mb-2 mb-lg-0"
               style={{
                 listStyleType: "none",
                 fontSize: "1.5rem",
@@ -60,7 +65,7 @@ export const NavbarPage = () => {
               data-aos="fade-down"
               data-aos-duration="1000"
             >
-              <li>
+              <li className="nav-link">
                 <Link
                   activeClass="active"
                   style={{ textDecoration: "none" }}
@@ -73,7 +78,7 @@ export const NavbarPage = () => {
                   About{" "}
                 </Link>{" "}
               </li>{" "}
-              <li>
+              <li className="nav-link">
                 <Link
                   to="/skills"
                   style={{ textDecoration: "none" }}
@@ -86,7 +91,7 @@ export const NavbarPage = () => {
                   Skills{" "}
                 </Link>{" "}
               </li>{" "}
-              <li>
+              <li className="nav-link">
                 <Link
                   to="/blog"
                   activeClass="active"
@@ -99,7 +104,7 @@ export const NavbarPage = () => {
                   Blog{" "}
                 </Link>{" "}
               </li>{" "}
-              <li>
+              <li className="nav-link">
                 <Link
                   to="/projects"
                   activeClass="active"
@@ -112,7 +117,7 @@ export const NavbarPage = () => {
                   Projects{" "}
                 </Link>{" "}
               </li>{" "}
-              <li>
+              <li className="nav-link">
                 <Link
                   to="/contact"
                   activeClass="active"
