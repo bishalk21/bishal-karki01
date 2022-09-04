@@ -18,9 +18,13 @@ export const NavbarPage = () => {
     }
   });
   return (
-    <Navbar expand="md lg" className="header js-header" fixed="top">
+    <Navbar
+      expand="md"
+      className="header js-header navbar navbar-expand-md bg-opacity-10"
+      fixed="top"
+    >
       <div className="container n-wrapper" id="Navbar">
-        <Navbar.Brand className="nav-brand">
+        <Navbar.Brand className="nav-brand navbar-brand nav-font">
           <div
             className="n-left logo"
             data-aos="fade-down"
@@ -30,13 +34,13 @@ export const NavbarPage = () => {
               <Link
                 activeClass="active"
                 style={{ textDecoration: "none", fontSize: "1.5rem" }}
-                to="/Intro"
+                to="/"
                 spy={true}
                 smooth={true}
-                onClick={() => setActiveNav("/Intro")}
-                className={activeNav === "/Intro" ? "active" : ""}
+                onClick={() => setActiveNav("/")}
+                className={activeNav === "/" ? "active" : ""}
               >
-                <img src={me} alt="logo" height="50rem" width="100%" />
+                <img src={me} alt="BK" width="80px" />
               </Link>{" "}
             </div>{" "}
             <Toggle />

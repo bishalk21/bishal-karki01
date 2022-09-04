@@ -6,15 +6,15 @@ export const MainLayout = ({ children }) => {
   return (
     <>
       <NavbarPage />
-      <main
+      <div
         style={{
           minHeight: "",
         }}
-        className="container"
+        className="container main"
       >
         {" "}
         {children}{" "}
-      </main>{" "}
+      </div>{" "}
       <FooterPage />
     </>
   );

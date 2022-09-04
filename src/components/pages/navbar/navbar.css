@@ -1,12 +1,12 @@
+.nav-font {
+    font-family: "Inknut Antiqua", serif;
+}
+
 .header {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    /* z-index: 0; */
     padding: 10px 0;
-    /* color: aliceblue; */
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,9 +47,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    display: flex;
     gap: 2rem;
-
 }
 
 .n-name {
@@ -176,107 +174,4 @@ nav.open {
 
         font-weight: 50;
     }
-}
-
-@media (max-width:991px) {
-    :root {
-        --fs-4xl: 42px;
-        --fs-3xl: 22px;
-        --fs-2xl: 24px;
-        --fs-xl: 18px;
-    }
-
-    /*
-    .nav-togler {
-        display: block;
-        height: 34px;
-        width: 40px; 
-        border: none;
-        z-index: 1;
-        background: wheat;
-        background-color: var(--orange);
-        cursor: pointer;
-    }
-
-
-    .nav-togler span {
-        display: block;
-        height: 2px;
-        width: 24px;
-        background-color: var(--main-color);
-        margin: auto;
-        position: relative;
-        transition: background-color 0.3s ease;
-    }
-
-    .nav-togler span::after,
-    .nav-togler span::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--main-color);
-        transition: transform 0.3s ease;
-    }
-
-    .nav-togler span::before {
-        transform: translateY(-7px);
-    }
-
-    .nav-togler span::after {
-        transform: translateY(7px);
-    }
-
-
-    .nav>ul {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        width: 190px;
-        background-color: var(--bg-color);
-        padding: 60px 30px 30px;
-        overflow-y: auto;
-        transition: all 0.3s ease;
-        transform: translateX(100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-
-    nav li {
-        display: block;
-        margin: 0;
-    }
-
-    nav a {
-        font-size: var(--fs-lg);
-    }
-
-    nav li+li {
-        border-top: 1px solid var(--border-color);
-    }
-
-    nav.open {
-        transform: translateX(0);
-        box-shadow: var(--shadow);
-    } 
-
-    .nav-togler.active span {
-        background-color: transparent;
-    }
-
-    .nav-togler.active span::before {
-        transform: rotate(45deg);
-    }
-
-    .nav-togler.active span::after {
-        transform: rotate(-45deg);
-    } */
-
 }
