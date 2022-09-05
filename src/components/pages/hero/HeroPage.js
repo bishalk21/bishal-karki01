@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./hero.css";
-import img1 from "../../../assets/img/boy.png";
+import glassesimoji from "../../../assets/img/glassesimoji.png";
+import img1 from "../../../assets/img/boy.jpeg";
 import thumbup from "../../../assets/img/thumbup.png";
 import crown from "../../../assets/img/crown.png";
 import FloatinDiv from "../../extra/FloatingDiv/FloatingDiv";
@@ -22,113 +23,104 @@ export const HeroPage = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <div className="Intro container" id="Intro">
-      {" "}
-      {/* left name side */}{" "}
-      <Col className="i-left">
-        <div className="i-name">
-          {" "}
-          {/* yahan change hy darkmode ka */}{" "}
-          <span
+    <div id="hero" className="hero container">
+      <div className="row">
+        <Col className="i-right col-md-5 text-center order-2 order-md-1">
+          <img
+            src={img1}
+            alt=""
             style={{
-              color: darkMode ? "white" : "",
+              objectFit: "contain",
+              width: "100%",
+              height: "100%",
+              padding: "4",
             }}
+          />
+          <motion.div
+            initial={{
+              top: "-0.1rem",
+              left: "13rem",
+            }}
+            whileInView={{
+              left: "-1rem",
+            }}
+            transition={transition}
+            className="floating-div"
           >
-            <h3> Howdy &#33; I Am </h3>{" "}
-          </span>{" "}
-          <span> Bishal Karki </span>{" "}
-          <span
-            className=""
+            <FloatinDiv img={crown} text1="Web" text2="Developer" />
+          </motion.div>{" "}
+          {/* animation */}{" "}
+          <motion.div
+            initial={{
+              left: "15rem",
+              top: "24rem",
+            }}
+            whileInView={{
+              left: "-6rem",
+            }}
+            transition={transition}
+            className="floating-div"
+          >
+            {" "}
+            {/* floatinDiv mein change hy dark mode ka */}{" "}
+            <FloatinDiv type="button" img={thumbup} text1="Hire" text2="Me" />
+          </motion.div>{" "}
+          <div
+            className="blur"
             style={{
-              color: darkMode ? "white" : "",
+              background: "rgb(238 210 255)",
             }}
-          >
-            <Typical
+          ></div>{" "}
+          <div
+            className="blur"
+            style={{
+              background: "#C1F5FF",
+              top: "17px",
+              width: "21px",
+              height: "11px",
+              left: "--9px",
+            }}
+          ></div>{" "}
+        </Col>
+        <Col className="i-left col-md-7 mt-5">
+          <div className="i-name">
+            {" "}
+            {/* yahan change hy darkmode ka */}{" "}
+            <span
               style={{
+                background: darkMode ? "black" : "",
                 color: darkMode ? "white" : "",
               }}
-              loop={Infinity}
-              className="banner-text"
-              wrapper="b"
-              steps={["Web Developer", 1800, "Software Engineer", 1800]}
-            />{" "}
-          </span>{" "}
-          <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work{" "}
-          </span>{" "}
-        </div>{" "}
-        {/* social icons */}{" "}
-        {/* <div className="i-icons">
-                        <img src={Github} alt="" />
-                        <img src={LinkedIn} alt="" />
-                        <img src={Instagram} alt="" />
-                      </div>{" "} */}{" "}
-        <CTA /> {/* <FeedbackMe /> */}{" "}
-      </Col>{" "}
-      {/* right image side */}{" "}
-      <Col className="i-right">
-        {" "}
-        {/* <img src={Vector1} alt="" /> */} <img src="" alt="" />
-        <img src="" alt="" /> {/* <video src={boy} alt="" /> */}{" "}
-        <img src={img1} alt="" /> {/* animation */}{" "}
-        <motion.img
-          initial={{
-            left: "-36%",
-          }}
-          whileInView={{
-            left: "-24%",
-          }}
-          transition={transition}
-          src="{glassesimoji}"
-          alt=""
-        />
-        <motion.div
-          initial={{
-            top: "5rem",
-            left: "9rem",
-          }}
-          whileInView={{
-            left: "0rem",
-          }}
-          transition={transition}
-          className="floating-div"
-        >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
-        </motion.div>{" "}
-        {/* animation */}{" "}
-        <motion.div
-          initial={{
-            left: "15rem",
-            top: "-11rem",
-          }}
-          whileInView={{
-            left: "5rem",
-          }}
-          transition={transition}
-          className="floating-div"
-        >
-          {" "}
-          {/* floatinDiv mein change hy dark mode ka */}{" "}
-          <FloatinDiv type="button" img={thumbup} text1="Hire" text2="Me" />
-        </motion.div>{" "}
-        <div
-          className="blur"
-          style={{
-            background: "rgb(238 210 255)",
-          }}
-        ></div>{" "}
-        <div
-          className="blur"
-          style={{
-            background: "#C1F5FF",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>{" "}
-      </Col>{" "}
+            >
+              <h3> Howdy &#33; I Am </h3>{" "}
+            </span>{" "}
+            <span> Bishal Karki </span>{" "}
+            <span
+              className=""
+              style={{
+                background: darkMode ? "black" : "",
+                color: darkMode ? "white" : "",
+              }}
+            >
+              <Typical
+                style={{
+                  background: darkMode ? "black" : "",
+                  color: darkMode ? "white" : "",
+                }}
+                loop={Infinity}
+                className="banner-text"
+                wrapper="b"
+                steps={["Web Developer", 1800, "Software Engineer", 1800]}
+              />{" "}
+            </span>{" "}
+            <span>
+              Frontend Developer with high level of experience in web designing
+              and development, producting the Quality work{" "}
+            </span>{" "}
+          </div>{" "}
+          <CTA />
+        </Col>
+      </div>
     </div>
   );
 };

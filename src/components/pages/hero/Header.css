@@ -12,10 +12,8 @@ header {
 
 
 .cta {
-    margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
-    justify-content: center;
     margin-top: 2rem;
 }
 
@@ -53,6 +51,7 @@ header {
 .banner-text {
     color: var(--color-primary);
     font-size: 29px;
+    font-weight: bold;
 }
 
 .header__socials::after {
@@ -127,6 +126,7 @@ header {
 
     .cta>.btn {
         cursor: pointer;
+        min-width: 10rem;
     }
 
     .cta .btn:hover {

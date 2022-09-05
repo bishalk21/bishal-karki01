@@ -2,7 +2,7 @@ import React from "react";
 import cv from "../../../assets/img/bishalkarki.docx";
 import "./Header.css";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 function CTA() {
   return (
@@ -17,7 +17,7 @@ function CTA() {
         {" "}
         Download CV <AiOutlineDownload fontSize="1em" />{" "}
       </Link>{" "}
-      <Link to="contact" className="btn btn-primary">
+      <Link to="/contact" className="btn btn-primary">
         let 's talk{" "}
       </Link>{" "}
     </div>
