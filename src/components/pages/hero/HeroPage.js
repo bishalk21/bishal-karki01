@@ -65,22 +65,6 @@ export const HeroPage = () => {
             {/* floatinDiv mein change hy dark mode ka */}{" "}
             <FloatinDiv type="button" img={thumbup} text1="Hire" text2="Me" />
           </motion.div>{" "}
-          <div
-            className="blur"
-            style={{
-              background: "rgb(238 210 255)",
-            }}
-          ></div>{" "}
-          <div
-            className="blur"
-            style={{
-              background: "#C1F5FF",
-              top: "17px",
-              width: "21px",
-              height: "11px",
-              left: "--9px",
-            }}
-          ></div>{" "}
         </Col>
         <Col className="i-left col-md-7 mt-5">
           <div className="i-name">
@@ -110,12 +94,17 @@ export const HeroPage = () => {
                 loop={Infinity}
                 className="banner-text"
                 wrapper="b"
-                steps={["Web Developer", 1800, "Software Engineer", 1800]}
+                steps={["Web Developer", 1800, "Software Developer", 1800]}
               />{" "}
             </span>{" "}
             <span>
-              Frontend Developer with high level of experience in web designing
-              and development, producting the Quality work{" "}
+              I am Full Stack Web Developer and Software Developer, specializing
+              in building (and occasionally designing) exceptional websites,
+              applications, and everything in between. I am a self-taught
+              developer with a passion for creating beautiful and functional
+              websites and applications. I have a strong background in web
+              development and I am always looking to learn new technologies and
+              improve my skills.{" "}
             </span>{" "}
           </div>{" "}
           <CTA />
